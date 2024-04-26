@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/pages/details.dart';
 import 'package:food_delivery/widget/suport.dart';
 
 class Home extends StatefulWidget {
@@ -56,34 +57,40 @@ class _HomeState extends State<Home> {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              Container(
-                margin: EdgeInsets.all(4),
-                child: Material(
-                  elevation: 5,
-                  borderRadius: BorderRadius.circular(20),
-                  child: Container(
-                    padding: EdgeInsets.all(14),
-                    child: Column(
-                      children: [
-                        Image.asset('images/salad2.png',
-                        
-                        height: 150,
-                        width: 150,
-                        fit: BoxFit.cover,
-                        ),
-                        Text('veggle teco mash',
-                        style: AppWidget.boldTextFeildStyle(),
-                        ),
-                        SizedBox(height: 5,),
-                        Text('fresh and helthy',style: AppWidget.LightTextFeildStyle(),),
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>Details()));
+                
+                },
+                child: Container(
+                  margin: EdgeInsets.all(4),
+                  child: Material(
+                    elevation: 5,
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      padding: EdgeInsets.all(14),
+                      child: Column(
+                        children: [
+                          Image.asset('images/salad2.png',
                           
-                        SizedBox(height: 5,),
-                        Text('\$23',style: AppWidget.LightTextFeildStyle(),)
-                        
-                      ],
+                          height: 150,
+                          width: 150,
+                          fit: BoxFit.cover,
+                          ),
+                          Text('veggle teco mash',
+                          style: AppWidget.boldTextFeildStyle(),
+                          ),
+                          SizedBox(height: 5,),
+                          Text('fresh and helthy',style: AppWidget.LightTextFeildStyle(),),
+                            
+                          SizedBox(height: 5,),
+                          Text('\$23',style: AppWidget.LightTextFeildStyle(),)
+                          
+                        ],
+                      ),
+                      
+                      
                     ),
-                    
-                    
                   ),
                 ),
               ),

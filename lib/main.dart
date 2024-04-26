@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery/pages/bottomnavbar.dart';
-import 'package:food_delivery/pages/home.dart';
-
-void main() {
+import 'package:food_delivery/pages/onbord.dart';
+void main() async{
+  
+// await Firebase.initializeApp(
+//     options: DefaultFirebaseOptions.currentPlatform,
+// );
   runApp(const MyApp());
 }
 
@@ -13,7 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BottomNav(),
+      //home: BottomNav(),
+      home: Onboard(),
+
     );
   }
 }
